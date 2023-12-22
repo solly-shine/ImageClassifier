@@ -5,7 +5,7 @@ from django.urls import  path, include
 app_name = 'entity-api'
 
 router = routers.DefaultRouter()
-router.register(r'entity', EntityViewSet)
+router.register(r'entities', EntityViewSet)
 
 urlpatterns = [
     path('', include(router.urls))

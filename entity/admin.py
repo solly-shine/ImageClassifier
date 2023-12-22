@@ -8,7 +8,7 @@ class EntityManager(admin.ModelAdmin):
     def img_thumbnail(self, obj):
         return format_html('<img src="{}" width="32" height="32" style="border-radius: 30%" /> '.format(obj.image.url))
 
-    list_display = ('img_thumbnail', 'name', 'date_modified', 'classification',)
+    list_display = ('img_thumbnail', 'date_modified', 'classification',)
     img_thumbnail.short_description = "Image"
 
 admin.site.register(Entity, EntityManager)

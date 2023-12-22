@@ -1,4 +1,4 @@
-import memorizeOne from "memoize-one";
+import memorizeOne from 'memorize-one';
 
 export const callFunctionAsMemorized = (func, ...params) =>
     memorizeOne((...params) => func(...params))(...params)
@@ -23,3 +23,5 @@ export const getFileExtension = filename => {
     }
     return null;
 }
+
+export const trunctuate = (text, maxLength = 20) => text.length < maxLength ? text.slice(0, maxLength) : text;

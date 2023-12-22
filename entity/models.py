@@ -2,7 +2,6 @@ from django.db import models
 
 # Create your models here.
 class Entity(models.Model):
-    name = models.CharField(max_length=256)
     image = models.ImageField(upload_to="entity")
     classification = models.CharField(max_length=256, blank=True)
     date_modified = models.DateTimeField(auto_now=True)
