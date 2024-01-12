@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { Col, Image, Row } from "react-bootstrap";
 import "./classification_styles.css"; // Import your custom CSS file
+import PropTypes from 'prop-types';
 
 class ClassificationCard extends Component {
     state = { imageSrc: null };
@@ -55,4 +56,8 @@ class ClassificationCard extends Component {
     }
 }
 
+ClassificationCard.propTypes = {
+    children: PropTypes.array,
+    
+}
 export default ClassificationCard;

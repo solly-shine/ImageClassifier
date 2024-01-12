@@ -2,6 +2,7 @@ import { Component } from "react";
 import api from "../api";
 import { Container, Row } from "react-bootstrap";
 import ClassificationCard from "./ClassificationCard";
+import PropTypes from 'prop-types';
 
 class ClassificationList extends Component {
     state = {
@@ -36,4 +37,7 @@ class ClassificationList extends Component {
     }
 }
 
+ClassificationList.propTypes = {
+    children: PropTypes.array
+}
 export default ClassificationList;
